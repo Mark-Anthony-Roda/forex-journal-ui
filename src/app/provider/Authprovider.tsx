@@ -48,8 +48,8 @@ export const AuthProvider = ({ children }: any) => {
     );
 
   return (
-    <div className="flex">
-      <SideNav />
+    <div className={`${!noAuthPages.includes(pathname) ? "flex" : ""}`}>
+      {!noAuthPages.includes(pathname) && <SideNav />}
       {children}
     </div>
   );

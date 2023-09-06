@@ -55,7 +55,7 @@ export default function Login() {
   const disableButton = submitting || form.email === "" || form.password === ""
 
   return (
-    <section className="flex max-h-screen min-h-screen overflow-y-hidden">
+    <section className="flex max-h-screen min-h-screen overflow-y-hidden bg-white">
       <div className="w-full md:w-1/2 px-4 h-screen flex flex-col items-center">
         <div className="text-[#555] w-full sm:w-4/5 md:1/2 h-full flex flex-col justify-center items-center mx-auto">
           <div className="text-center">

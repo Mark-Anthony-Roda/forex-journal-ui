@@ -59,7 +59,7 @@ export default function Login() {
       <div className="w-full md:w-1/2 px-4 h-screen flex flex-col items-center">
         <div className="text-[#555] w-full sm:w-4/5 md:1/2 h-full flex flex-col justify-center items-center mx-auto">
           <div className="text-center">
-            <span className="text-[35px] leading-normal tracking-[2px] flex">
+            <span className="text-[35px] leading-normal flex">
               Trading <span className="text-[#007bff] font-bold">Journal</span>
             </span>
             <p className="text-[12px] leading-normal font-semibold tracking-[0.8px]">

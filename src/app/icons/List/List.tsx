@@ -1,0 +1,49 @@
+export default function List(props: { className?: string }) {
+  return (
+    <svg
+      className={props.className}
+      stroke="currentColor"
+      fill="currentColor"
+      strokeWidth="0"
+      viewBox="0 0 512 512"
+      height="1em"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
+        d="M160 144h288M160 256h288M160 368h288"
+      ></path>
+      <circle
+        cx="80"
+        cy="144"
+        r="16"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
+      ></circle>
+      <circle
+        cx="80"
+        cy="256"
+        r="16"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
+      ></circle>
+      <circle
+        cx="80"
+        cy="368"
+        r="16"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
+      ></circle>
+    </svg>
+  );
+}

@@ -1,9 +1,8 @@
 "use client";
-import { SWRConfig } from "swr";
-import { useRequest } from "../hooks";
 import { usePathname, useRouter } from "next/navigation";
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
-import Auth from "../lib/api/auth";
+import Auth from "@/app/lib/api/auth";
+import { SideNav } from "@/app/components/Layout";
 export const AuthProvider = ({ children }: any) => {
   const noAuthPages = useMemo(() => ["/login"], []);
   const pathname = usePathname();
@@ -48,5 +47,10 @@ export const AuthProvider = ({ children }: any) => {
       </Fragment>
     );
 
-  return <Fragment>{children}</Fragment>;
+  return (
+    <div className="flex">
+      <SideNav />
+      {children}
+    </div>
+  );
 };

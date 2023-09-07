@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/app/components/Button";
 import { Plus } from "@/app/icons/Operation";
 import { TradeTableColumnProp } from "@/app/interfaces/Trade";
@@ -5,8 +7,10 @@ import { Checkbox } from "@/app/components/Input";
 import { Trade } from "@/app/interfaces/Model";
 import { ArrowDown, ArrowUp } from "../icons/Arrow";
 import { Table } from "../components/Table";
+import { useRouter } from "next/navigation";
 
 export default function Trades() {
+  const router = useRouter();
   const columns: TradeTableColumnProp[] = [
     {
       columnName: "selectAll",
@@ -42,9 +46,11 @@ export default function Trades() {
             : "bg-gray-500";
 
         return (
-          <span className={`${statusClass} p-1 rounded text-white`}>
-            {trade.status}
-          </span>
+          <div
+            className={`${statusClass} px-2 py-2 w-min sm:w-full mx-auto rounded-full sm:rounded text-white flex justify-center text-center items-center`}
+          >
+            <p className="text-center hidden sm:flex">{trade.status}</p>
+          </div>
         );
       },
     },
@@ -55,24 +61,34 @@ export default function Trades() {
     {
       columnName: "openDate",
       label: "Open Date",
+      responsive: "hide",
+      className: "hidden sm:table-cell",
     },
     {
       columnName: "entry",
       label: "Entry Price",
+      responsive: "hide",
+      className: "hidden md:table-cell",
     },
     {
       columnName: "lot",
       label: "Lot",
+      responsive: "hide",
+      className: "hidden sm:table-cell",
     },
     {
       columnName: "closeDate",
       label: "Close Date",
+      responsive: "hide",
+      className: "hidden md:table-cell",
     },
     {
       columnName: "closePrice",
       label: "Close Price",
       render: (trade: Trade) =>
         trade.closePrice ? `$${trade.closePrice}` : "--",
+      responsive: "hide",
+      className: "hidden md:table-cell",
     },
     {
       columnName: "profit",
@@ -170,6 +186,7 @@ export default function Trades() {
           className={`bg-[#007bff] hover:bg-[#0059ff] text-center rounded-md text-white font-semibold`}
           buttonAttributes={{
             className: `leading-[20px] tracking-[3px] px-[20px] py-[10px] w-full text-xs`,
+            onClick: () => router.push("/trades/add"),
           }}
         />
       </div>

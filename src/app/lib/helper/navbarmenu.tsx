@@ -16,17 +16,17 @@ export const NavBarMenu: SideNavMenuProps[] = [
     label: "Trades",
   },
   {
-    url: "/",
+    url: "/reports",
     icon: <BarChart />,
     label: "Reports",
   },
   {
-    url: "/",
+    url: "/accounts",
     icon: <BriefCase />,
     label: "Accounts",
   },
   {
-    url: "/",
+    url: "/settings",
     icon: <Settings />,
     label: "Settings",
   },

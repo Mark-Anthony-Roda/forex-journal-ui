@@ -1,6 +1,6 @@
 "use client";
 
-import InputText from "./InputText";
+import Input from "./Input";
 import Checkbox from "./Checkbox";
 
-export { InputText, Checkbox };
+export { Input, Checkbox };

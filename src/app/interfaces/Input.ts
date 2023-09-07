@@ -3,6 +3,7 @@ import { InputHTMLAttributes, ReactNode } from "react";
 export interface InputText {
   wrapperClass?: string;
   inputAttributes?: InputHTMLAttributes<HTMLInputElement>;
+  label?: string | ReactNode;
 }
 
 export interface CheckboxProp {

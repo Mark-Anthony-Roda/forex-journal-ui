@@ -13,7 +13,7 @@ export default function Table(props: {
           {columns.map((item, index) => {
             const { className = "py-4", label } = item;
             return (
-              <th key={index} className={className}>
+              <th key={index} className={`${className}`}>
                 {label}
               </th>
             );
@@ -29,7 +29,7 @@ export default function Table(props: {
             >
               {columns.map((column, idx) => {
                 return (
-                  <td key={idx} className="py-4">
+                  <td key={idx} className={`py-4 ${column.className ?? ""}`}>
                     {column.render
                       ? column.render(item)
                       : item[column.columnName]}

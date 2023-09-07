@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Checkbox, InputText } from "@/app/components/Input";
+import { Checkbox, Input } from "@/app/components/Input";
 import Link from "next/link";
 import { Button } from "@/app/components/Button";
 import { FormEvent, useState } from "react";
@@ -67,7 +67,7 @@ export default function Login() {
             </p>
           </div>
           <form className="my-[20px] w-full" onSubmit={onSubmitHandler}>
-            <InputText
+            <Input
               wrapperClass="border w-full p-[20px] rounded-t-md"
               inputAttributes={{
                 className: "w-full outline-none",
@@ -77,7 +77,7 @@ export default function Login() {
               }}
             />
 
-            <InputText
+            <Input
               wrapperClass="border border-t-0 w-full p-[20px] rounded-b-md"
               inputAttributes={{
                 className: "w-full outline-none",

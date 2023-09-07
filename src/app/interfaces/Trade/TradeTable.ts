@@ -5,4 +5,5 @@ export interface TradeTableColumnProp {
   className?: string;
   render?: Function;
   columnName: string | number;
+  responsive?: "show" | "hide";
 }

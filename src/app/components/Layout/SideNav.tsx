@@ -4,10 +4,13 @@ import { NavBarMenu } from "@/app/lib/helper/navbarmenu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function SideNav() {
+export default function SideNav(props: { wrapperClass?: string }) {
+  const {
+    wrapperClass = "bg-white text-[#555] h-screen w-[20%] hidden lg:flex lg:flex-col",
+  } = props;
   const pathname = usePathname();
   return (
-    <div className={`bg-white text-[#555] h-screen w-[20%]`}>
+    <div className={wrapperClass}>
       <div className="flex justify-between items-center p-4">
         <span className="text-lg leading-normal flex">
           Trading <span className="text-[#007bff] font-bold">Journal</span>
